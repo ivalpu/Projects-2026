@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog - Construator</title>
+
+	<!-- Preconnect for faster resource loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+	<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		crossorigin="anonymous">
+
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/jpeg" href="img/portfolio-2.jpg">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<style>
+		/* Specific Blog Styles for Grid */
+		.blogs .box-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+			gap: 2rem;
+		}
+
+		.blogs .box-container .box {
+			border: var(--border);
+			box-shadow: var(--box-shadow);
+			background: var(--white);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.blogs .box-container .box:hover .image img {
+			transform: scale(1.1);
+		}
+
+		.blogs .box-container .box .image {
+			height: 25rem;
+			overflow: hidden;
+			width: 100%;
+			flex-shrink: 0;
+		}
+
+		.blogs .box-container .box .image img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transition: .2s linear;
+		}
+
+		.blogs .box-container .box .content {
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+
+		.blogs .box-container .box .content .icons {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 2rem;
+			margin-bottom: 2rem;
+			border-bottom: var(--border);
+		}
+
+		.blogs .box-container .box .content .icons a {
+			font-size: 1.5rem;
+			color: var(--light-color);
+		}
+
+		.blogs .box-container .box .content .icons a:hover {
+			color: var(--yellow);
+		}
+
+		.blogs .box-container .box .content .icons a i {
+			color: var(--yellow);
+			padding-right: .5rem;
+		}
+
+		.blogs .box-container .box .content h3 {
+			font-size: 2.2rem;
+			color: var(--black);
+			margin-bottom: 1rem;
+		}
+
+		.blogs .box-container .box .content p {
+			font-size: 1.5rem;
+			color: var(--light-color);
+			line-height: 2;
+			padding-bottom: 2rem;
+			flex-grow: 1;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Header Section -->
+	<header class="header">
+		<a href="index.html" class="logo">Constru<span>ator</span></a>
+
+		<nav class="navbar">
+			<a href="index.html">Inicio</a>
+			<a href="nosotros.html">Nosotros</a>
+			<a href="team.html">Equipo</a>
+			<a href="servicios.html">Servicios</a>
+			<a href="blog.html">Blog</a>
+			<a href="project.html">Proyectos</a>
+			<a href="contact.html">Contacto</a>
+		</nav>
+
+		<div class="icons">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<div id="info-btn" class="fas fa-info-circle"></div>
+		</div>
+
+		<div class="contact-info">
+			<div id="close-contact-info" class="fas fa-times"></div>
+			<div class="info">
+				<i class="fas fa-phone"></i>
+				<h3>teléfono</h3>
+				<p>+34 91 123 45 67</p>
+			</div>
+			<div class="info">
+				<i class="fas fa-envelope"></i>
+				<h3>email</h3>
+				<p>info@construator.com</p>
+			</div>
+			<div class="info">
+				<i class="fas fa-map-marker-alt"></i>
+				<h3>dirección</h3>
+				<p>Calle Principal 123, Madrid, España</p>
+			</div>
+		</div>
+	</header>
+
+	<!-- Page Title -->
+	<div class="page-header" style="background-image: url('img/service-2.jpg');">
+		<h1>Nuestro Blog</h1>
+		<p> <a href="index.html">Inicio</a> &raquo; Blog </p>
+	</div>
+
+	<!-- Main Blog Section with Sidebar -->
+	<section class="blog-container" style="padding: 5rem 9%;">
+
+		<!-- Blog Content Grid -->
+		<div class="blogs">
+			<div class="box-container">
+				<!-- Blog Item 1 -->
+				<div class="box">
+					<div class="image">
+						<img src="img/blog-1.jpg" alt="Tendencias en construcción"
+							loading="lazy">
+					</div>
+					<div class="content">
+						<div class="icons">
+							<a href="#"> <i class="fas fa-calendar"></i> 10 Dic, 2025 </a>
+							<a href="#"> <i class="fas fa-user"></i> admin </a>
+						</div>
+						<h3>5 Tendencias en Construcción para 2026</h3>
+						<p>Descubre los materiales y diseños que marcarán la pauta en la
+							arquitectura residencial el próximo año.</p>
+						<a href="#" class="btn">leer más</a>
+					</div>
+				</div>
+
+				<!-- Blog Item 2 -->
+				<div class="box">
+					<div class="image">
+						<img src="img/blog-2.jpg" alt="Reforma de cocina económica"
+							loading="lazy">
+					</div>
+					<div class="content">
+						<div class="icons">
+							<a href="#"> <i class="fas fa-calendar"></i> 05 Dic, 2025 </a>
+							<a href="#"> <i class="fas fa-user"></i> admin </a>
+						</div>
+						<h3>Cómo Reformar tu Cocina con Poco Presupuesto</h3>
+						<p>Tips prácticos para renovar el corazón de tu hogar sin gastar una
+							fortuna. Estrategias de bajo coste.</p>
+						<a href="#" class="btn">leer más</a>
+					</div>
+				</div>
+
+				<!-- Blog Item 3 -->
+				<div class="box">
+					<div class="image">
+						<img src="img/blog-3.jpg" alt="Aislamiento térmico eficiente"
+							loading="lazy">
+					</div>
+					<div class="content">
+						<div class="icons">
+							<a href="#"> <i class="fas fa-calendar"></i> 28 Nov, 2025 </a>
+							<a href="#"> <i class="fas fa-user"></i> admin </a>
+						</div>
+						<h3>La Importancia de la Eficiencia Energética</h3>
+						<p>Ahorra dinero y cuida el planeta invirtiendo en aislamiento y
+							ventanas de calidad para tu vivienda.</p>
+						<a href="#" class="btn">leer más</a>
+					</div>
+				</div>
+
+				<!-- Blog Item 4 -->
+				<div class="box">
+					<div class="image">
+						<img src="img/service-1.jpg"
+							alt="Materiales de construcción sostenibles" loading="lazy">
+					</div>
+					<div class="content">
+						<div class="icons">
+							<a href="#"> <i class="fas fa-calendar"></i> 20 Nov, 2025 </a>
+							<a href="#"> <i class="fas fa-user"></i> admin </a>
+						</div>
+						<h3>Materiales Sostenibles: El Futuro</h3>
+						<p>Análisis de los nuevos materiales ecológicos que están revolucionando
+							la industria.</p>
+						<a href="#" class="btn">leer más</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pagination -->
+			<div class="pagination">
+				<ul>
+					<li><a href="#">&laquo;</a></li>
+					<li><a href="#" class="active">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="widget search-box">
+				<form action="">
+					<input type="text" placeholder="Buscar..." aria-label="Buscar en el blog">
+					<button type="submit" aria-label="Botón de búsqueda"><i
+							class="fas fa-search"></i></button>
+				</form>
+			</div>
+
+			<div class="widget categories">
+				<h3>Categorías</h3>
+				<ul>
+					<li><a href="#">Construcción <span>(12)</span></a></li>
+					<li><a href="#">Diseño Interior <span>(8)</span></a></li>
+					<li><a href="#">Reformas <span>(15)</span></a></li>
+					<li><a href="#">Arquitectura <span>(5)</span></a></li>
+					<li><a href="#">Noticias <span>(3)</span></a></li>
+				</ul>
+			</div>
+
+			<div class="widget recent-posts">
+				<h3>Entradas Recientes</h3>
+				<div class="post"
+					style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+					<img src="img/blog-1.jpg" alt="Miniatura de tendencias"
+						style="width: 7rem; height: 5rem; object-fit: cover;" loading="lazy">
+					<div>
+						<a href="#"
+							style="font-size: 1.4rem; color: var(--black); font-weight: bold;">Tendencias
+							2026</a>
+						<span
+							style="display: block; font-size: 1.2rem; color: var(--light-color);">10
+							Dic, 2025</span>
+					</div>
+				</div>
+				<div class="post"
+					style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+					<img src="img/blog-2.jpg" alt="Miniatura de cocinas"
+						style="width: 7rem; height: 5rem; object-fit: cover;" loading="lazy">
+					<div>
+						<a href="#"
+							style="font-size: 1.4rem; color: var(--black); font-weight: bold;">Cocinas
+							Low Cost</a>
+						<span
+							style="display: block; font-size: 1.2rem; color: var(--light-color);">05
+							Dic, 2025</span>
+					</div>
+				</div>
+				<div class="post"
+					style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+					<img src="img/blog-3.jpg" alt="Miniatura de eficiencia"
+						style="width: 7rem; height: 5rem; object-fit: cover;" loading="lazy">
+					<div>
+						<a href="#"
+							style="font-size: 1.4rem; color: var(--black); font-weight: bold;">Eficiencia
+							Energética</a>
+						<span
+							style="display: block; font-size: 1.2rem; color: var(--light-color);">28
+							Nov, 2025</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="widget tags-cloud">
+				<h3>Etiquetas</h3>
+				<a href="#">construcción</a>
+				<a href="#">diseño</a>
+				<a href="#">hogar</a>
+				<a href="#">reformas</a>
+				<a href="#">jardín</a>
+				<a href="#">arquitectura</a>
+				<a href="#">sostenibilidad</a>
+				<a href="#">materiales</a>
+			</div>
+		</div>
+
+	</section>
+
+	<!-- Footer Section -->
+	<!-- Footer Section -->
+	<section class="footer">
+		<div class="box-container">
+			<div class="box">
+				<h3>Construator</h3>
+				<p><strong style="color: #e0e0e0;">Construyendo sueños</strong> <span
+						style="color: #888;">con calidad y compromiso.</span><br><span
+						style="color: #aaa;">Tu socio de confianza en cada proyecto.</span>
+				</p>
+				<div class="share">
+					<a href="#" class="fab fa-facebook-f"></a>
+					<a href="#" class="fab fa-twitter"></a>
+					<a href="#" class="fab fa-instagram"></a>
+					<a href="#" class="fab fa-linkedin"></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<h3>Contacto</h3>
+				<a href="#"> <i class="fas fa-phone"></i> +34 91 123 45 67 </a>
+				<a href="#"> <i class="fas fa-envelope"></i> info@construator.com </a>
+				<a href="#"> <i class="fas fa-map-marker-alt"></i> Madrid, España </a>
+			</div>
+
+			<div class="box">
+				<h3>Newsletter</h3>
+				<p>Suscríbete para recibir noticias y ofertas exclusivas.</p>
+				<form action="">
+					<input type="email" placeholder="tu email..." class="email"
+						aria-label="Tu email para suscripción">
+					<input type="submit" value="suscribirse" class="btn">
+				</form>
+			</div>
+		</div>
+
+		<div class="credit">Creado por <span>Construator</span> | Todos los derechos reservados.</div>
+	</section>
+
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+
+	<!-- Custom JS -->
+	<script src="js/main.js" defer></script>
+
+	<!-- Scroll to Top Button -->
+	<div class="scroll-top">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+
+</body>
+
+</html>
