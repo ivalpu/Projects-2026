@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Café Premium Artesanal. Descubre el mejor café de grano selecto, postres y una experiencia inolvidable." />
+	<!-- Favicon using Emoji -->
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>" />
+	<title>Café Premium | Experiencia Artesanal</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+		rel="stylesheet" />
+
+	<!-- Boxicons -->
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+	<header class="header" id="header">
+		<nav class="nav container">
+			<a href="#" class="nav__logo"><i class="bx bxs-coffee-bean"></i> COFFEE.</a>
+
+			<!-- Redesigned Mobile Menu Structure -->
+			<div class="nav__menu" id="nav-menu">
+				<div class="nav__menu-header">
+					<div class="nav__close" id="nav-close"><i class="bx bx-x"></i></div>
+				</div>
+
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#home" class="nav__link active-link">Inicio</a>
+					</li>
+					<li class="nav__item">
+						<a href="#specialty" class="nav__link">Especialidad</a>
+					</li>
+					<li class="nav__item">
+						<a href="#products" class="nav__link">Productos</a>
+					</li>
+					<li class="nav__item">
+						<a href="#premium" class="nav__link">Premium</a>
+					</li>
+					<li class="nav__item">
+						<a href="#gallery" class="nav__link">Galería</a>
+					</li>
+					<li class="nav__item">
+						<a href="#blog" class="nav__link">Blog</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="nav__actions">
+				<div class="nav__cart" onclick="window.toggleCart(true)">
+					<i class="bx bx-shopping-bag"></i>
+					<span class="nav__cart-count" id="cart-count">0</span>
+				</div>
+				<div class="nav__toggle" id="nav-toggle">
+					<i class="bx bx-grid-alt"></i>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- MAIN HOME CONTENT -->
+	<main class="main" id="main-content">
+		<section class="hero" id="home">
+			<img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+				alt="Fondo Café" class="hero__bg" />
+			<div class="hero__container container">
+				<div class="hero__data reveal">
+					<span class="hero__subtitle">Bienvenido a la excelencia</span>
+					<h1 class="hero__title">
+						Descubre el Verdadero <br />
+						Sabor del Café
+					</h1>
+					<p class="hero__description">
+						Granos seleccionados artesanalmente para brindarte una experiencia
+						inigualable en cada taza. Despierta tus sentidos con nuestra
+						selección premium.
+					</p>
+					<div class="hero__buttons">
+						<a href="#products" class="btn">Explorar Menú</a>
+						<a href="#specialty" class="btn btn-ghost"
+							style="border-color: #fff; color: #fff">Saber Más</a>
+					</div>
+				</div>
+				<div class="hero__img-wrapper reveal">
+					<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
+						alt="Taza de Café Latte Art" class="hero__img" />
+				</div>
+			</div>
+		</section>
+
+		<section class="section specialty" id="specialty">
+			<span class="section__subtitle">Nuestra Pasión</span>
+			<h2 class="section__title">¿Por qué elegirnos?</h2>
+			<div class="specialty__container container grid">
+				<div class="specialty__card reveal">
+					<i class="bx bx-coffee-togo specialty__icon"></i>
+					<h3 class="specialty__title">Grano Selecto</h3>
+					<p class="specialty__description">
+						Cosechamos solo los granos de mayor calidad para asegurar un aroma
+						y sabor perfectos.
+					</p>
+				</div>
+				<div class="specialty__card reveal">
+					<i class="bx bx-award specialty__icon"></i>
+					<h3 class="specialty__title">Calidad Premium</h3>
+					<p class="specialty__description">
+						Certificaciones internacionales que garantizan la pureza y el
+						proceso artesanal.
+					</p>
+				</div>
+				<div class="specialty__card reveal">
+					<i class="bx bx-coffee-bean specialty__icon"></i>
+					<h3 class="specialty__title">Tostado Perfecto</h3>
+					<p class="specialty__description">
+						Un proceso de tostado meticuloso para resaltar las notas naturales
+						de cada variedad.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section products" id="products">
+			<span class="section__subtitle">Delicias</span>
+			<h2 class="section__title">Elige tu Favorito</h2>
+			<div class="products__filters container">
+				<button class="product-filter-btn active-product" data-filter="all">
+					Todos
+				</button>
+				<button class="product-filter-btn" data-filter="cafe">Cafés</button>
+				<button class="product-filter-btn" data-filter="postre">
+					Postres
+				</button>
+				<button class="product-filter-btn" data-filter="especial">
+					Especiales
+				</button>
+			</div>
+			<div class="products__content container grid">
+				<article class="product__card reveal" data-category="cafe">
+					<div class="product__tag">Más vendido</div>
+					<div class="product__img-box">
+						<img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=500&q=80"
+							loading="lazy" alt="Cappuccino Art" class="product__img" />
+					</div>
+					<h3 class="product__title">Cappuccino Art</h3>
+					<span class="product__price">€5.90
+						<button class="product__button"
+							onclick="window.addToCart('Cappuccino Art', 5.90, 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=150&q=80')">
+							<i class="bx bx-shopping-bag"></i></button></span>
+				</article>
+
+				<article class="product__card reveal" data-category="cafe">
+					<div class="product__img-box">
+						<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80"
+							loading="lazy" alt="Americano Black" class="product__img" />
+					</div>
+					<h3 class="product__title">Americano Black</h3>
+					<span class="product__price">€4.50
+						<button class="product__button"
+							onclick="window.addToCart('Americano Black', 4.50, 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=150&q=80')">
+							<i class="bx bx-shopping-bag"></i></button></span>
+				</article>
+
+				<article class="product__card reveal" data-category="postre">
+					<div class="product__img-box">
+						<img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80"
+							loading="lazy" alt="Cheesecake" class="product__img" />
+					</div>
+					<h3 class="product__title">Cheesecake</h3>
+					<span class="product__price">€6.00
+						<button class="product__button"
+							onclick="window.addToCart('Cheesecake', 6.00, 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=150&q=80')">
+							<i class="bx bx-shopping-bag"></i></button></span>
+				</article>
+
+				<article class="product__card reveal" data-category="especial">
+					<div class="product__img-box">
+						<img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=500&q=80"
+							loading="lazy" alt="Mochaccino" class="product__img" />
+					</div>
+					<h3 class="product__title">Mochaccino</h3>
+					<span class="product__price">€7.20
+						<button class="product__button"
+							onclick="window.addToCart('Mochaccino', 7.20, 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=150&q=80')">
+							<i class="bx bx-shopping-bag"></i></button></span>
+				</article>
+
+				<article class="product__card reveal" data-category="postre">
+					<div class="product__img-box">
+						<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80"
+							loading="lazy" alt="Croissant" class="product__img" />
+					</div>
+					<h3 class="product__title">Croissant</h3>
+					<span class="product__price">€3.50
+						<button class="product__button"
+							onclick="window.addToCart('Croissant', 3.50, 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=150&q=80')">
+							<i class="bx bx-shopping-bag"></i></button></span>
+				</article>
+			</div>
+		</section>
+
+		<section class="section premium" id="premium">
+			<div class="premium__overlay"></div>
+			<div class="premium__container container">
+				<div class="premium__data reveal">
+					<h2 class="premium__title">
+						Café Exclusivo de <br />
+						Edición Limitada
+					</h2>
+					<p class="premium__description">
+						Disfruta de nuestra selección mensual. Granos cultivados a más de
+						2000 metros de altura, con notas a chocolate amargo y frutos
+						rojos.
+					</p>
+					<button class="btn"
+						onclick="window.addToCart('Suscripción Premium', 24.90, 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=150&q=80')">
+						Comprar Ahora - €24.90
+					</button>
+				</div>
+				<div class="premium__img-box reveal">
+					<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=634&q=80"
+						loading="lazy" alt="Café Premium" class="premium__img" />
+				</div>
+			</div>
+		</section>
+
+		<section class="section gallery" id="gallery">
+			<span class="section__subtitle">Momentos</span>
+			<h2 class="section__title">Nuestra Galería</h2>
+			<div class="gallery__container container grid">
+				<!-- Gallery 1: Tall / Pouring -->
+				<div class="gallery__card reveal" onclick="window.openLightbox(this)">
+					<img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=500&q=80"
+						data-full="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1200&q=90"
+						loading="lazy" alt="Barista Pouring" class="gallery__img" />
+				</div>
+				<!-- Gallery 2: Latte Art -->
+				<div class="gallery__card reveal" onclick="window.openLightbox(this)">
+					<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=500&q=80"
+						data-full="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=90"
+						loading="lazy" alt="Latte Art" class="gallery__img" />
+				</div>
+				<!-- Gallery 3: Beans -->
+				<div class="gallery__card reveal" onclick="window.openLightbox(this)">
+					<img src="https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&w=500&q=80"
+						data-full="https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&w=1200&q=90"
+						loading="lazy" alt="Granos de Café" class="gallery__img" />
+				</div>
+				<!-- Gallery 4: Friends/Shop Vibe -->
+				<div class="gallery__card reveal" onclick="window.openLightbox(this)">
+					<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80"
+						data-full="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=90"
+						loading="lazy" alt="Ambiente Cafetería" class="gallery__img" />
+				</div>
+			</div>
+		</section>
+
+		<section class="section blog" id="blog">
+			<span class="section__subtitle">Nuestras Historias</span>
+			<h2 class="section__title">Blog del Café</h2>
+			<div class="blog__container container grid">
+				<!-- Articulo 1 -->
+				<article class="blog__card reveal">
+					<div class="blog__img-wrapper" onclick="window.openBlog(1)">
+						<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80"
+							loading="lazy" alt="Preparación Café" class="blog__img" />
+					</div>
+					<div class="blog__data">
+						<span class="blog__date">12 de octubre, 2025</span>
+						<h3 class="blog__title">
+							10 Maneras de preparar el café perfecto
+						</h3>
+						<span class="blog__link" onclick="window.openBlog(1)">Leer artículo <i
+								class="bx bx-right-arrow-alt"></i></span>
+					</div>
+				</article>
+
+				<!-- Articulo 2 -->
+				<article class="blog__card reveal">
+					<div class="blog__img-wrapper" onclick="window.openBlog(2)">
+						<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+							loading="lazy" alt="Café Saludable" class="blog__img" />
+					</div>
+					<div class="blog__data">
+						<span class="blog__date">8 de septiembre, 2025</span>
+						<h3 class="blog__title">
+							Beneficios ocultos del café para tu salud
+						</h3>
+						<span class="blog__link" onclick="window.openBlog(2)">Leer artículo <i
+								class="bx bx-right-arrow-alt"></i></span>
+					</div>
+				</article>
+
+				<!-- Articulo 3 (Nuevo) -->
+				<article class="blog__card reveal">
+					<div class="blog__img-wrapper" onclick="window.openBlog(3)">
+						<img src="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=600&q=80"
+							loading="lazy" alt="Granos de Café" class="blog__img" />
+					</div>
+					<div class="blog__data">
+						<span class="blog__date">25 de noviembre, 2025</span>
+						<h3 class="blog__title">
+							Arábica vs Robusta: ¿Cuál es la diferencia?
+						</h3>
+						<span class="blog__link" onclick="window.openBlog(3)">Leer artículo <i
+								class="bx bx-right-arrow-alt"></i></span>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<!-- CART PAGE SECTION -->
+	<section class="cart-page" id="cart-view">
+		<div class="cart__container">
+			<div class="cart__header">
+				<h2 class="cart__title">Tu Carrito</h2>
+				<div class="cart__close-btn"
+					onclick="window.toggleCart(false); window.location.hash='#products'">
+					<i class="bx bx-arrow-back"></i> Seguir Comprando
+				</div>
+			</div>
+			<div id="cart-items-container" class="cart__items">
+				<!-- JS will inject items here -->
+			</div>
+			<div class="cart__footer" id="cart-footer">
+				<div class="cart__total">
+					Total: €<span id="cart-total">0.00</span>
+				</div>
+				<button class="btn" onclick="alert('¡Gracias por tu compra! Procesando pedido...')">
+					Finalizar Compra
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- BLOG POST VIEW SECTION (Nuevo) -->
+	<section class="blog-page" id="blog-view">
+		<div class="blog-view__container">
+			<div class="blog-view__header">
+				<div class="blog-view__back-btn" onclick="window.closeBlog()">
+					<i class="bx bx-arrow-back"></i> Volver al Blog
+				</div>
+				<div id="blog-content-injector">
+					<!-- Dynamic Content -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container grid">
+			<div class="footer__content">
+				<a href="#" class="footer__logo">COFFEE.</a>
+				<p class="footer__description">
+					Llevamos el mejor café desde la finca hasta tu taza. Pasión en cada
+					gota.
+				</p>
+				<div class="footer__social">
+					<span class="footer__social-link" onclick="window.openModal('social-modal')"><i
+							class="bx bxl-facebook"></i></span>
+					<span class="footer__social-link" onclick="window.openModal('social-modal')"><i
+							class="bx bxl-instagram"></i></span>
+					<span class="footer__social-link" onclick="window.openModal('social-modal')"><i
+							class="bx bxl-twitter"></i></span>
+				</div>
+			</div>
+			<div class="footer__content">
+				<h3 class="footer__title">Empresa</h3>
+				<ul class="footer__links">
+					<li>
+						<span class="footer__link" onclick="window.openModal('about-modal')">Sobre
+							Nosotros</span>
+					</li>
+					<li>
+						<span class="footer__link" onclick="window.openModal('services-modal')">Nuestros
+							Servicios</span>
+					</li>
+					<li>
+						<span class="footer__link" onclick="window.openModal('privacy-modal')">Política de
+							Privacidad</span>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__content">
+				<h3 class="footer__title">Dirección</h3>
+				<ul class="footer__links">
+					<li>Av. Principal 123</li>
+					<li>Ciudad de México</li>
+					<li>reservas@coffee.com</li>
+					<li>+52 555 123 4567</li>
+				</ul>
+			</div>
+			<div class="footer__content">
+				<h3 class="footer__title">Horarios</h3>
+				<ul class="footer__links">
+					<li>Lun - Vie: 7am - 9pm</li>
+					<li>Sábados: 8am - 10pm</li>
+					<li>Domingos: 8am - 3pm</li>
+				</ul>
+			</div>
+		</div>
+		<p class="footer__copy">
+			&#169; 2025 Coffee. Todos los derechos reservados.
+		</p>
+	</footer>
+
+	<a href="#" class="scrollup" id="scroll-up"><i class="bx bx-up-arrow-alt"></i></a>
+	<div class="toast" id="toast">
+		<i class="bx bxs-check-circle toast__icon"></i>
+		<span class="toast__message" id="toast-message">Producto añadido al carrito</span>
+	</div>
+
+	<!-- Lightbox DOM -->
+	<div class="lightbox" id="lightbox">
+		<div class="lightbox__content">
+			<i class="bx bx-x lightbox__close" onclick="window.closeLightbox()"></i>
+			<img src="" alt="Imagen Galería" class="lightbox__img" id="lightbox-img" />
+		</div>
+	</div>
+
+	<!-- Modals (Simple Info) -->
+	<div class="modal" id="about-modal">
+		<div class="modal__content">
+			<i class="bx bx-x modal__close" onclick="window.closeModal()"></i>
+			<h2 class="modal__title">Sobre Nosotros</h2>
+			<p class="modal__text">
+				Fundada en 2010, Coffee nació del amor por los granos de altura y la
+				tradición artesanal.
+			</p>
+			<p class="modal__text">
+				Nuestra misión es transformar cada taza en una experiencia sensorial
+				única.
+			</p>
+		</div>
+	</div>
+	<div class="modal" id="services-modal">
+		<div class="modal__content">
+			<i class="bx bx-x modal__close" onclick="window.closeModal()"></i>
+			<h2 class="modal__title">Nuestros Servicios</h2>
+			<h3 class="modal__subtitle">Catering</h3>
+			<p class="modal__text">Eventos corporativos y privados.</p>
+			<h3 class="modal__subtitle">Barismo</h3>
+			<p class="modal__text">Cursos y certificaciones.</p>
+		</div>
+	</div>
+	<div class="modal" id="privacy-modal">
+		<div class="modal__content">
+			<i class="bx bx-x modal__close" onclick="window.closeModal()"></i>
+			<h2 class="modal__title">Privacidad</h2>
+			<p class="modal__text">
+				Tus datos están seguros con nosotros. Solo los usamos para mejorar tu
+				experiencia.
+			</p>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+# IDEs y Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Dependencias (por si usas Node.js más adelante)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Seguridad
+.env
+.env.local
+.env.example
