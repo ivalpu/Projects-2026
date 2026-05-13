@@ -51,7 +51,7 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
-			transition: .2s linear;
+			transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 		}
 
 		.team .box-container .box .image .share {
@@ -65,7 +65,7 @@
 			align-items: center;
 			justify-content: center;
 			transform: scale(0);
-			transition: .2s linear;
+			transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 		}
 
 		.team .box-container .box:hover .image .share {
@@ -81,10 +81,12 @@
 			background: var(--white);
 			margin: 0 .3rem;
 			border-radius: 50%;
+			transition: background 0.3s ease, transform 0.3s ease;
 		}
 
 		.team .box-container .box .image .share a:hover {
 			background: var(--yellow);
+			transform: scale(1.1);
 		}
 
 		.team .box-container .box .content {
@@ -157,7 +159,7 @@
 	<section class="team">
 		<div class="box-container">
 
-			<div class="box">
+			<div class="box fade-up" data-animation-delay="0">
 				<div class="image">
 					<img src="img/team-1.jpg" alt="Foto de Juan Martínez" loading="lazy">
 					<div class="share">
@@ -173,7 +175,7 @@
 				</div>
 			</div>
 
-			<div class="box">
+			<div class="box fade-up" data-animation-delay="100">
 				<div class="image">
 					<img src="img/team-woman-1.png" alt="Foto de Laura García" loading="lazy">
 					<div class="share">
@@ -189,7 +191,7 @@
 				</div>
 			</div>
 
-			<div class="box">
+			<div class="box fade-up" data-animation-delay="200">
 				<div class="image">
 					<img src="img/team-3.jpg" alt="Foto de Carlos López" loading="lazy">
 					<div class="share">
@@ -205,7 +207,7 @@
 				</div>
 			</div>
 
-			<div class="box">
+			<div class="box fade-up" data-animation-delay="300">
 				<div class="image">
 					<img src="img/testimonial-2.jpg" alt="Foto de Sofía Rodríguez" loading="lazy">
 					<div class="share">
