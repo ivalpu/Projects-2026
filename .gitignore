@@ -1,23 +1,28 @@
-# IDEs y Editores
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Sistema Operativo
-.DS_Store
-Thumbs.db
-
-# Dependencias (por si usas Node.js más adelante)
+```
+# Dependencies
 node_modules/
+
+# Build artifacts
 dist/
 build/
+*.min.js
+*.min.css
+*.bundle.js
 
-# Logs
+# Logs and temp files
 *.log
-npm-debug.log*
+*.tmp
 
-# Seguridad
+# Environment
 .env
 .env.local
-.env.example
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```
